@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "hubeny"
+
+if ARGV.length < 4
+  puts "Usage: hubeny lat1 lng1 lat2 lng2"
+  exit 1
+end
+
+lat1 = ARGV[0].to_f
+lng1 = ARGV[1].to_f
+lat2 = ARGV[2].to_f
+lng2 = ARGV[3].to_f
+algorithm = (ARGV[4] || "hubeny").to_sym
+
+puts Hubeny.distance(lat1, lng1, lat2, lng2)

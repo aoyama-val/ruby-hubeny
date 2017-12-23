@@ -21,7 +21,13 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-puts Hubeny.distance(35.65500, 139.74472, 36.10056, 140.09111)
+require "hubeny"
+
+# Calculate distance using Hubeny's formula:
+puts Hubeny.distance(35.65500, 139.74472, 36.10056, 140.09111)      #=> 58502.458931819616 (in meters)
+
+# Calculate distance using Haversine formula:
+puts Hubeny.haversine(35.65500, 139.74472, 36.10056, 140.09111)     #=> 58619.80584901641 (in meters)
 ```
 
 
